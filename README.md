@@ -1,0 +1,1 @@
+a simple light app that generates random god-tier secure passwords and stores them you can extract or change them anytime u want i used javascript and python flask although i could buil it using just flask i prefered to use both as a trainning to remember syntax etc i havent coded in 2 mounths after all
