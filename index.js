@@ -57,3 +57,53 @@ var password = a+z+e+r+t+y+u+i+o+p+q+s+d+f+h+j+k+l+m+w+x+c
         }
     }
 );} 
+
+// function myFunction() {
+//     var str = "https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_slice"; 
+//     var res = str.slice(8, 5590);
+//      var n = res.search("/");
+//      var reso = res.slice(0, n);
+  
+//     document.getElementById("demo").innerHTML = reso;
+    
+//   }
+function extract(){
+    var webname = document.getElementById("webname").value ;
+    var weburl = document.getElementById("weburl").value ;
+
+
+  $.ajax(
+    {
+        type:'POST',
+        dataType:'json',
+        contentType:'application/json;charset-utf-08',
+        url:'http://127.0.0.1:5000/extract?&weburl='+weburl,
+        success:function (data) {
+            var reply=data.result;
+            document.getElementById("pwd").value = reply[0];
+
+
+        }
+    }
+);} 
+
+
+function extract2(){
+    var webname = document.getElementById("webname").value ;
+
+
+  $.ajax(
+    {
+        type:'POST',
+        dataType:'json',
+        contentType:'application/json;charset-utf-08',
+        url:'http://127.0.0.1:5000/extracto?webname='+ webname,
+        success:function (data) {
+            var reply=data.result;
+            document.getElementById("pwd").value = reply[0];
+
+
+        }
+    }
+);} 
+
